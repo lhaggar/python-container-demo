@@ -1,0 +1,5 @@
+FROM python-container-demo:latest
+
+ENV ENV=development
+
+# Do any dev specific stuff here, e.g. install dev-only packages, set dev env vars e.t.c

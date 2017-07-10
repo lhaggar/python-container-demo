@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  instance:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    command: "tail -f /dev/null"
+    environment:
+      READ_DIR: /data/read
+      WRITE_DIR: /data/write
+    volumes:
+      - ./src:/app/src
+      - ./data/read:/data/read
+      - ./data/write:/data/write
